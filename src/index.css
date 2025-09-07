@@ -714,6 +714,10 @@
     margin-top: calc(var(--spacing) * 4);
   }
 
+  .mt-6 {
+    margin-top: calc(var(--spacing) * 6);
+  }
+
   .mt-auto {
     margin-top: auto;
   }
@@ -993,6 +997,10 @@
 
   .min-h-\[500px\] {
     min-height: 500px;
+  }
+
+  .min-h-screen {
+    min-height: 100vh;
   }
 
   .min-h-svh {
@@ -2163,6 +2171,10 @@
     padding: 1px;
   }
 
+  .px-0 {
+    padding-inline: calc(var(--spacing) * 0);
+  }
+
   .px-1 {
     padding-inline: calc(var(--spacing) * 1);
   }
@@ -2205,6 +2217,10 @@
 
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
+  }
+
+  .py-2\.5 {
+    padding-block: calc(var(--spacing) * 2.5);
   }
 
   .py-3 {
@@ -4201,6 +4217,12 @@
   }
 
   @media (width >= 40rem) {
+    .sm\:grid-cols-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (width >= 40rem) {
     .sm\:flex-row {
       flex-direction: row;
     }
@@ -4267,6 +4289,12 @@
   }
 
   @media (width >= 48rem) {
+    .md\:hidden {
+      display: none;
+    }
+  }
+
+  @media (width >= 48rem) {
     .md\:w-\[var\(--radix-navigation-menu-viewport-width\)\] {
       width: var(--radix-navigation-menu-viewport-width);
     }
@@ -4287,6 +4315,12 @@
   @media (width >= 48rem) {
     .md\:grid-cols-3 {
       grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+
+  @media (width >= 48rem) {
+    .md\:grid-cols-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
 
@@ -4338,6 +4372,12 @@
     .md\:after\:hidden:after {
       content: var(--tw-content);
       display: none;
+    }
+  }
+
+  @media (width >= 64rem) {
+    .lg\:grid-cols-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
 
@@ -4974,13 +5014,37 @@ html {
   font-family: var(--font-family);
 }
 
-@media (width <= 768px) {
+@media (width <= 640px) {
   html {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   body {
     overscroll-behavior: none;
+  }
+}
+
+@media (width >= 641px) and (width <= 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (width >= 769px) and (width <= 1024px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (width >= 1025px) and (width <= 1440px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (width >= 1441px) {
+  html {
+    font-size: 18px;
   }
 }
 
@@ -5004,6 +5068,61 @@ html {
   button, [role="button"], input[type="button"], input[type="submit"] {
     min-width: 44px;
     min-height: 44px;
+  }
+}
+
+@media (width >= 768px) {
+  .responsive-container {
+    max-width: none;
+    margin: 0;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+}
+
+@media (width <= 767px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+@media (width >= 768px) {
+  .glass-morphism {
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+    background: #ffffffd9;
+    border: 1px solid #ffffff40;
+  }
+
+  .dark .glass-morphism {
+    background: #0f1419d9;
+    border: 1px solid #37415159;
+  }
+}
+
+@media (width >= 640px) {
+  .grid-responsive-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width >= 768px) {
+  .grid-responsive-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (width >= 1024px) {
+  .grid-responsive-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (width >= 1280px) {
+  .grid-responsive-5 {
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
@@ -5062,6 +5181,73 @@ html {
 @supports (-webkit-touch-callout: none) {
   .h-screen {
     height: -webkit-fill-available;
+  }
+}
+
+@media (width >= 768px) {
+  .chart-container {
+    height: 350px;
+  }
+}
+
+@media (width >= 1024px) {
+  .chart-container {
+    height: 400px;
+  }
+}
+
+@media (width >= 768px) {
+  .card-responsive {
+    padding: 1.5rem;
+  }
+}
+
+@media (width >= 1024px) {
+  .card-responsive {
+    padding: 2rem;
+  }
+}
+
+@media (width <= 1024px) {
+  .sidebar-overlay {
+    z-index: 40;
+    background: #00000080;
+    position: fixed;
+    inset: 0;
+  }
+}
+
+@media (width >= 768px) {
+  .text-responsive-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+
+  .text-responsive-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .text-responsive-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@media (width >= 1024px) {
+  .text-responsive-lg {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .text-responsive-xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .text-responsive-2xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 

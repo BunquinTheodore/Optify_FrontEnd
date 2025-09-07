@@ -159,7 +159,7 @@ const categories = ['Emergency', 'Travel', 'Transportation', 'Investment', 'Home
   return (
     <div className="space-y-6">
       {/* Overview Cards */}
-      <div className="grid grid-cols-2 gap-3 mb-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
         <Card className="glass-morphism shadow-card">
           <CardContent className="p-4">
             <div className="flex items-center justify-between">

@@ -130,7 +130,7 @@ export function Reports() {
 
         <TabsContent value="overview" className="space-y-6">
           {/* Summary Cards */}
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
             <Card className="glass-morphism shadow-card">
               <CardContent className="p-4">
                 <div className="flex items-center justify-between">

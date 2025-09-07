@@ -187,7 +187,7 @@ export function TransactionManager({ showAddForm = false, onToggleForm }: Transa
   return (
     <div className="space-y-4">
       {/* Overall Summary Cards */}
-      <div className="grid grid-cols-2 gap-3 mb-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
         <Card className="glass-morphism shadow-card">
           <CardContent className="p-4">
             <div className="text-center">
@@ -207,9 +207,7 @@ export function TransactionManager({ showAddForm = false, onToggleForm }: Transa
             </div>
           </CardContent>
         </Card>
-      </div>
 
-      <div className="grid grid-cols-2 gap-3">
         <Card className="glass-morphism shadow-card">
           <CardContent className="p-4">
             <div className="text-center">
@@ -260,7 +258,7 @@ export function TransactionManager({ showAddForm = false, onToggleForm }: Transa
         <CardContent className="space-y-4">
           <form onSubmit={handleSubmit} className="space-y-4">
             {/* Type Selection */}
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
               <button
                 type="button"
                 onClick={() => setFormData({ ...formData, type: 'income', category: '' })}
@@ -299,7 +297,7 @@ export function TransactionManager({ showAddForm = false, onToggleForm }: Transa
               </button>
             </div>
 
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               <div>
                 <Label htmlFor="amount" className="text-sm">Amount</Label>
                 <Input

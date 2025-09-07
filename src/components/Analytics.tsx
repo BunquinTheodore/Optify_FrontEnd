@@ -61,7 +61,7 @@ export function Analytics() {
       />
 
       {/* KPI Cards */}
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         <Card className="glass-morphism shadow-card">
           <CardContent className="p-4">
             <div className="text-center">
