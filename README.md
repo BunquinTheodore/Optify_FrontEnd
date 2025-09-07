@@ -1,2 +1,2 @@
 # Optify_FrontEnd
-The Front end HAHAHA
+Inspiring Start Up Company from BSU - Alangilan
